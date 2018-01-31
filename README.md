@@ -40,12 +40,12 @@ Unzipping ArtificialFastqGenerator.zip will give you:
 ArtificialFastqGenerator can be run with any reference sequence in FASTA format. Below is information about all of its user
 parameters:
 
-usage java -jar ArtificialFastqGenerator.jar -O <outputPath> -R <referenceGenomePath> -S <startSequenceIdentifier>
+usage ```java -jar ArtificialFastqGenerator.jar -O <outputPath> -R <referenceGenomePath> -S <startSequenceIdentifier>
 -F1 <fastq1ForQualityScores> -F2 <fast2ForQualityScores> -CMGCS <coverageMeanGCcontentSpread> -CMP <coverageMeanPeak>
 -CMPGC <coverageMeanPeakGCcontent> -CSD <coverageSD> -E <endSequenceIdentifier> -GCC <GCcontentBasedCoverage>
 -GCR <GCcontentRegionSize> -L <logRegionStats> -N <nucleobaseBufferSize> -OF <outputFormat> -RCNF <readsContainingNfilter>
 -RL <readLength> -SE <simulateErrorInRead> -TLM <templateLengthMean> -TLSD <templateLengthSD> -URQS <useRealQualityScores>
--X <xStart> -Y <yStart>
+-X <xStart> -Y <yStart>```
 
 -h Print usage help.
 -O, <outputPath>			Path for the artificial fastq and log files, including their base name (must be specified).
@@ -80,7 +80,7 @@ accepting Phred quality scores from test1.fastq and test2.fastq, and using them 
 should include the file base name (e.g. $OUTPUT_DIR/Chr1), and the -S and -E parameters are prefixes of the desired sequence
 identifiers, sufficiently long to ensure a match.
 
-java -jar ArtificialFastqGenerator.jar -R miniReference.fasta -O C1 -S ">1" -E ">" -URQS true -SE true -F1 test1.fastq -F2 test2.fastq
+```java -jar ArtificialFastqGenerator.jar -R miniReference.fasta -O C1 -S ">1" -E ">" -URQS true -SE true -F1 test1.fastq -F2 test2.fastq```
 
 Apart from the artificial FASTQs, ArtificialFastqGenerator will output a file which contains the start and end indexes in the
 reference sequence of all the generated reads, and a log file which contains the parameter settings and summary coverage and
