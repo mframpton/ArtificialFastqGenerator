@@ -135,14 +135,14 @@ the logging regions is determined by the *-LRS* and *-NBS* parameters. An *ALL* 
 sequence, however it is marked (i.e. inc. 'N'), while an *ACGT* nucleobase is one marked as A/C/G/T. The regional summary
 coverage statistics (1 line per region) are logged underneath a header line containing the field names. The fields are:-
 
-(1) *ALL_SO_FAR_NUM*: the total number of ALL nucleobases processed so far;
-(2) *ALL_AV_COV*: the average coverage for ALL nucleobases in this region;
-(3) *ALL_MIN_COV*: the minimum coverage for an ALL nucleobase in this region;
-(4) *ALL_MAX_COV*: the maximum coverage for an ALL nucleobase in this region;
-(5) *ACGT_NUM*: the number of ACGT nucleobases in this region;
-(6) *ACGT_AV_COV*: the average coverage for ACGT nucleobases in this region;
-(7) *ACGT_MIN_COV*: the minimum coverage for an ACGT nucleobase in this region;
-(8) *ACGT_MAX_COV*: the maximum coverage for an ACGT nucleobase in this region;
+1. *ALL_SO_FAR_NUM*: the total number of ALL nucleobases processed so far;
+2. *ALL_AV_COV*: the average coverage for ALL nucleobases in this region;
+3. *ALL_MIN_COV*: the minimum coverage for an ALL nucleobase in this region;
+4. *ALL_MAX_COV*: the maximum coverage for an ALL nucleobase in this region;
+5. *ACGT_NUM*: the number of ACGT nucleobases in this region;
+6. *ACGT_AV_COV*: the average coverage for ACGT nucleobases in this region;
+7. *ACGT_MIN_COV*: the minimum coverage for an ACGT nucleobase in this region;
+8. *ACGT_MAX_COV*: the maximum coverage for an ACGT nucleobase in this region;
 
 The overall summary coverage and error statistics are logged last underneath the header line "OVERALL STATISTICS". The overall
 summary coverage statistics are equivalent to the regional statistics. The overall error statistics include the total number
