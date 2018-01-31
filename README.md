@@ -1,8 +1,6 @@
-Notes for ArtificialFastqGenerator v1.0.0  --  Matthew Frampton, September 2012
--------------------------------------------------------------------------------
+# Notes for ArtificialFastqGenerator v1.0.0  --  Matthew Frampton, September 2012
 
-1. Introduction
-===============
+## 1. Introduction
 
 The FASTQ format [1] is the standard text-based representation for nucleotide sequences and corresponding base quality scores
 that are outputted by high throughput sequencing instruments such as the Illumina Genome Analyzer. Pipelines for the analysis
@@ -27,8 +25,7 @@ cite the following paper:
 M. Frampton, R. Houlston (2012) Generation of Artificial FASTQ Files to Evaluate the Performance of Next-Generation Sequencing Pipelines.
 PLoS ONE 7 (11), http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0049110 .
 
-2. Downloading ArtificialFastqGenerator
-=======================================
+## 2. Downloading ArtificialFastqGenerator
 
 Unzipping ArtificialFastqGenerator.zip will give you:
 
@@ -38,8 +35,7 @@ Unzipping ArtificialFastqGenerator.zip will give you:
 - this readme file,
 - files for the test described in Section 3: miniReference.fasta, test1.fastq and test2.fastq
 
-3. Running ArtificialFastqGenerator
-===================================
+## 3. Running ArtificialFastqGenerator
 
 ArtificialFastqGenerator can be run with any reference sequence in FASTA format. Below is information about all of its user
 parameters:
@@ -91,15 +87,13 @@ reference sequence of all the generated reads, and a log file which contains the
 error statistics (see Section 7). The user can check the log file and use FastQC to confirm that the generated FASTQs have
 expected characteristics given the parameter settings.
 
-4. Read and template DNA length
-===============================
+## 4. Read and template DNA length
 
 Each read in the generated FASTQs will be of the length specified by the -RL parameter. The template DNA lengths are assumed
 to be normally distributed, where the -TLM parameter gives the population mean, and -TLSD, the standard deviation. Hence the
 gap in number of nucleobases between two reads in a pair is: template DNA length - (2 * read length).
 
-5. Specifying a nucleobase's coverage
-=====================================
+## 5. Specifying a nucleobase's coverage
 
 Setting a nucleobase's target coverage is highly user-customisable. To set a nucleobase's target coverage,
 ArtificialFastqGenerator calculates the region's GC content, and then defines and samples from a normal distribution of
@@ -114,8 +108,7 @@ coverage of each capture probe versus its GC content for four samples sequenced 
 the user can obviously change the parameters in order to increase/decrease the variation in coverage across regions with
 different GC content. The GCC parameter can be used to switch off the biasing of coverage based on GC content.
 
-6. Phred quality score and error generation
-===========================================
+## 6. Phred quality score and error generation
 
 If -URQS is set to false (the default), then ArtificialFastqGenerator assigns every base in every read a high Pred score of
 40, Sanger-encoding "I". The exceptions are N (unknown) reference sequence nucleobases which it gives a very low quality score
@@ -135,8 +128,7 @@ Ns.
 Possible future extensions of the software are to offer the user greater choice over quality generation, and if possible, to
 improve the accuracy of sequencing error by basing it on more than just the quality scores e.g. surrrounding motifs [3, 4, 5].
 
-7. Summary coverage and error statistics
-========================================
+## 7. Summary coverage and error statistics
 
 The ArtificialFastqGenerator logs regional and overall summary coverage statistics and overall error statistics. The size of
 the logging regions is determined by the -LRS and -NBS parameters. An ALL nucleobase is any nucleobase in the reference
@@ -157,8 +149,7 @@ summary coverage statistics are equivalent to the regional statistics. The overa
 of reads, nucleobase calls and ACGT nucleobase calls, and the number of these AGCT nucleobase calls for which an error was
 simulated.
 
-8. References
-=============
+## 8. References
 
 [1] Cock P, Fields C, Goto N, Heuer M, Rice P (2009) The Sanger FASTQ file format for sequences with quality scores, and the
 Solexa/Illumina FASTQ variants. Nucleic Acids Research 38:1767-71.
